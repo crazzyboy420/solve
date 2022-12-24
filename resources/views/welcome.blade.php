@@ -31,7 +31,7 @@
            <div>
             <ul class="flex items-center flex-nowrap justify-between gap-y-7 gap-3">
                 @foreach($series as $item)
-                <li class="w-full lg:max-w-[165px]">
+                <li class="max-w-[165px]">
                   <a href="#" class="bg-white border mx-auto box-shadow w-full rounded-lg flex items-center justify-center">
                     <img src="{{ $item->image }}" alt="{{ $item->name }}" class="w-20 md:w-auto h-auto object-contain">
                   </a>
@@ -42,11 +42,11 @@
            </div>
 
            <!--Feature Section-->
-            <section class="mt-20 lg:mt-[140px]">
+            <section class="mt-20 container mx-auto lg:mt-[140px]">
               <h1 class="heading-tertiory text-center mb-10 md:mb-16"> Featured Courses </h1>
-              <div class="max-w-7xl w-full inline-flex single-feature gap-10 flex-wrap mx-auto">
+              <div class="inline-flex single-feature gap-10 flex-wrap">
+                  @foreach($courses as $course)
                 <div class="bg-white rounded grap-10 overflow-hidden shadow-card">
-                    @foreach($courses as $course)
                   <a href="single.html">
                     <img src="{{ $course->image }}" alt="PEST Driven Laravel" class="w-full h-auto object-contain">
                   </a>
